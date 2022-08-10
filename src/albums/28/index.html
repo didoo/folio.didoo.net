@@ -71,7 +71,7 @@
               </span>
             </span>
             <span class="img-wrap">
-              <img width="100%" class="content" alt="Comparison between application and component library - Change" src="/storage/cache/images/000/302/graph-circles,large.1574369535.png" />
+              <img width="100%" class="content" alt="Comparison between application and component library - Change" src="media/graph-circles.png" />
             </span>
           </li>
           <li>
@@ -82,7 +82,7 @@
               </span>
             </span>
             <span class="img-wrap">
-              <img width="100%" class="content" alt="Comparison between application and component library - Frequency" src="/storage/cache/images/000/303/graph-squares,large.1574369540.png" />
+              <img width="100%" class="content" alt="Comparison between application and component library - Frequency" src="media/graph-squares.png" />
             </span>
           </li>
           <li>
@@ -96,30 +96,7 @@
               </span>
             </span>
             <span class="img-wrap">
-              <video preload="none" id="k-video-304" data-src="/storage/originals/76/fa/resize.mp4" class="k-video" poster="http://folio.didoo.net/admin/images/no-thumb,huge.png"></video>
-              <script>
-                $(function () {
-                  var v = $("#k-video-304");
-                  if (v.parents("#pjax-container-staging").length) return;
-                  v.attr("src", v.data("src"));
-                  v.attr("preload", "metadata");
-                  v.attr("width", v.parent().width());
-                  var m = $("#k-video-304").mediaelementplayer({
-                    pluginPath: $K.location.real_root_folder + "../../../../../app/site/themes/common/js/index.html",
-                    success: function (player, dom) {
-                      $(player).bind("loadedmetadata", function () {
-                        v.data("aspect", this.videoWidth / this.videoHeight);
-                        v.data("width", this.videoWidth);
-                        $K.resizeVideos();
-                        var p = $("#k-video-304");
-                        if (p.attr("autoplay")) {
-                          player.play();
-                        }
-                      });
-                    },
-                  });
-                });
-              </script>
+              <video class="k-video" preload="auto" controls="controls" src="media/resize.mp4" type="video/mp4"></video>
             </span>
           </li>
         </ul>

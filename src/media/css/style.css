@@ -260,7 +260,7 @@ body > header > div > a {
   height: 66px;
   z-index: 9;
   display: block;
-  background: url(../img/didoo.svg) no-repeat 50% 50%;
+  background: url(/media/img/didoo.svg) no-repeat 50% 50%;
   background-size: 250px 66px;
   text-indent: -9999px;
   overflow: hidden;
@@ -379,7 +379,7 @@ body > article section ul.content-list li {
 body > article section span.img-wrap {
   display: block;
   line-height: 0;
-  background-image: url(../img/loading.gif), url(../img/diagonal_lines.gif);
+  background-image: url(/media/img/loading.gif), url(/media/img/diagonal_lines.gif);
   background-position: 50% 50%, top left;
   background-repeat: no-repeat, repeat;
   box-shadow: 0px 0px 2px #cccccc;
