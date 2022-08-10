@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Is it possible to measure the impact of the adoption of a design system on the workload of a team? This is the question that I tried to answer, when I started t…" />
+    <meta name="author" content="Cristiano Rastelli" />
+    <meta name="keywords" content="Cristiano Rastelli, portfolio" />
+    <link rel="stylesheet" type="text/css" href="/media/css/style.css" />
+    <title>Badoo - Measuring the Impact of the Design System - Cristiano Rastelli - Portfolio</title>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-138418-3"]);
+      _gaq.push(["_trackPageview"]);
+      (function () {
+        var ga = document.createElement("script");
+        ga.type = "text/javascript";
+        ga.async = true;
+        ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <!-- LOGO -->
+        <a href="http://www.didoo.net" rel="home">Didoo</a>
+        <!-- MENU -->
+        <nav>
+          <div class="menu-header-menu-container">
+            <ul class="menu" id="menu-header-menu">
+              <li class="blog">
+                <a href="http://www.didoo.net/">Blog<span></span></a>
+              </li>
+              <li class="folio current-menu-item">
+                <a href="../../../../../index.html">Portfolio<span></span></a>
+              </li>
+              <li class="about">
+                <a href="http://www.didoo.net/about/">About<span></span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <article>
+      <header>
+        <h3>Badoo - Measuring the Impact of the Design System</h3>
+        <p>
+          Is it possible to measure the impact of the adoption of a design system on the workload of a team?<br /><br />
+          This is the question that I tried to answer, when I started this small side project. I've used a Node.js script to parse the git history of our Badoo Mobile Web application, extract the information relevant to the UI layer (CSS),
+          and aggregate the data over a three years timescale. I have then plotted the data using D3.js in different formats of data-visualisation. The results were beyond imagination.<br /><br />
+          It was clearly possible to discern two periods in time, before and after the adoption of the design system. The first period was caractherized by large and frequent changes to the UI code; the second period by smaller and less
+          frequent changes. This clearly showed how using a library of reusable UI components has drastically reduced the workload of the UI Engineering team.<br /><br />
+          I have written about my findings in a Medium post, where you can read in detail about this project, how I have developed the Node.js script, and how I have built the D3.js data visualisation for it.<br /><br />
+          <span class="website"
+            >Read the full story on Medium: <a href="https://medium.com/@didoo/measuring-the-impact-of-a-design-system-7f925af090f7">https://medium.com/@didoo/measuring-the-impact-of-a-design-system-7f925af090f7</a></span
+          >
+        </p>
+      </header>
+      <section>
+        <ul class="content-list">
+          <li>
+            <span class="img-data">
+              <span class="img-caption">
+                <h4>Comparison between application and component library - Change</h4>
+                <p>Visual representation of the changes in two codebases, on the top the application and on the bottom the component library.</p>
+              </span>
+            </span>
+            <span class="img-wrap">
+              <img width="100%" class="content" alt="Comparison between application and component library - Change" src="/storage/cache/images/000/302/graph-circles,large.1574369535.png" />
+            </span>
+          </li>
+          <li>
+            <span class="img-data">
+              <span class="img-caption">
+                <h4>Comparison between application and component library - Frequency</h4>
+                <p>A similar visual representation of the changes in two codebases, this time using rectangles instead of circles. In this case it's more evident the high frequency of change before the adoption of the component library.</p>
+              </span>
+            </span>
+            <span class="img-wrap">
+              <img width="100%" class="content" alt="Comparison between application and component library - Frequency" src="/storage/cache/images/000/303/graph-squares,large.1574369540.png" />
+            </span>
+          </li>
+          <li>
+            <span class="img-data">
+              <span class="img-caption">
+                <h4>Frequency of change</h4>
+                <p>
+                  The difference between before/after the introduction of a design system becomes even more self-evident when you compress horizontally the scale. In this case, the areas on the left get more opaque, while the areas on the
+                  right remains relatively transparent. This means that on the left we have many frequent medium/large changes, on the right infrequent small changes.
+                </p>
+              </span>
+            </span>
+            <span class="img-wrap">
+              <video preload="none" id="k-video-304" data-src="/storage/originals/76/fa/resize.mp4" class="k-video" poster="http://folio.didoo.net/admin/images/no-thumb,huge.png"></video>
+              <script>
+                $(function () {
+                  var v = $("#k-video-304");
+                  if (v.parents("#pjax-container-staging").length) return;
+                  v.attr("src", v.data("src"));
+                  v.attr("preload", "metadata");
+                  v.attr("width", v.parent().width());
+                  var m = $("#k-video-304").mediaelementplayer({
+                    pluginPath: $K.location.real_root_folder + "../../../../../app/site/themes/common/js/index.html",
+                    success: function (player, dom) {
+                      $(player).bind("loadedmetadata", function () {
+                        v.data("aspect", this.videoWidth / this.videoHeight);
+                        v.data("width", this.videoWidth);
+                        $K.resizeVideos();
+                        var p = $("#k-video-304");
+                        if (p.attr("autoplay")) {
+                          player.play();
+                        }
+                      });
+                    },
+                  });
+                });
+              </script>
+            </span>
+          </li>
+        </ul>
+      </section>
+      <footer>
+        <nav>
+          <a href="/albums/22/index.html" class="prev">&larr; Readings for Lunch</a>
+          <a href="/index.html" class="goup k-nav-current" title="View all">&uarr; View all</a>
+        </nav>
+      </footer>
+    </article>
+  </body>
+</html>
