@@ -1,0 +1,328 @@
+/*! Cristiano Rastelli - Portfolio - v3.0 - November 2026 - Plain CSS, flat BEM selectors, no build step */
+
+/* ===== TOKENS ===== */
+
+:root {
+  --color-brand: #ffb300;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-text: #333;
+  --color-text-strong: #666;
+  --color-text-muted: #999;
+  --color-frame-shadow: #ccc;
+  --font-body: "Asap", "Tahoma", "Trebuchet", "Arial", "Helvetica", "Verdana", sans-serif;
+  --font-display: "Populaire", sans-serif;
+}
+
+/* ===== FONTS ===== */
+
+@font-face {
+  font-family: Populaire;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Populaire.woff") format("woff");
+}
+
+@font-face {
+  font-family: Asap;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Asap-Regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: Asap;
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/Asap-Italic-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: Asap;
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Asap-Bold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: Asap;
+  font-style: italic;
+  font-weight: bold;
+  src: url("../fonts/Asap-BoldItalic-webfont.woff") format("woff");
+}
+
+/* ===== BASE ===== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* :where() keeps specificity low, so that BEM classes can override these states */
+a:where(:hover, :active) {
+  color: var(--color-black);
+  text-decoration: underline;
+}
+
+/* ===== PAGE HEADER ===== */
+
+.page-header {
+  overflow: hidden;
+  background: var(--color-brand);
+}
+
+.page-header__wrapper {
+  position: relative;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.page-header__logo {
+  display: block;
+  width: 250px;
+  height: 66px;
+  margin: 31px auto 20px;
+  overflow: hidden;
+  background: url("../img/didoo.svg") no-repeat 50% 50%;
+  background-size: 250px 66px;
+  text-indent: -9999px;
+}
+
+.page-header__menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+.page-header__menu-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.page-header__menu-link {
+  position: relative;
+  display: block;
+  height: 42px;
+  color: var(--color-black);
+  font-family: var(--font-display);
+  font-size: 36px;
+  line-height: 42px;
+  text-decoration: none;
+}
+
+/* The underline sits just outside the clipped header, and slides in on hover */
+.page-header__menu-link::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  margin-top: 20px;
+  background-color: var(--color-white);
+  content: "";
+  transition:
+    margin-top 0.15s 0s ease-in-out,
+    height 0.05s 0.15s ease-in-out;
+}
+
+.page-header__menu-link:hover::after {
+  height: 4px;
+  margin-top: 0;
+}
+
+.page-header__menu-link--current {
+  color: var(--color-white);
+}
+
+@media (width > 660px) {
+  .page-header {
+    height: 120px;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 31px;
+    left: 50px;
+    margin: 0;
+  }
+
+  .page-header__menu {
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    margin: 0;
+  }
+
+  .page-header__menu-link {
+    font-size: 42px;
+  }
+}
+
+/* ===== PAGE MAIN ===== */
+
+.page-main {
+  max-width: 1034px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+@media (width > 660px) {
+  .page-main {
+    margin: 50px auto;
+    padding: 50px;
+  }
+}
+
+/* ===== PROJECT INTRO ===== */
+
+.project-intro {
+  margin-bottom: 20px;
+}
+
+.project-intro__title {
+  color: var(--color-black);
+  font-family: var(--font-display);
+  font-size: 48px;
+  line-height: 1;
+}
+
+.project-intro__text {
+  margin-top: 20px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  line-height: 21px;
+}
+
+.project-intro__text:last-child {
+  margin-bottom: 50px;
+}
+
+.project-intro__website {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  color: var(--color-text-strong);
+  font-weight: bold;
+  line-height: 21px;
+}
+
+/* ===== MEDIA LIST ===== */
+
+.media-list {
+  list-style: none;
+}
+
+/* ===== MEDIA ITEM ===== */
+
+.media-item {
+  margin-bottom: 80px;
+}
+
+.media-item__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.media-item__title {
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.media-item__description {
+  margin-top: 5px;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.media-item__meta {
+  margin-left: auto;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  line-height: 20px;
+  text-align: right;
+}
+
+.media-item__frame {
+  background-image: url("../img/loading.gif"), url("../img/diagonal_lines.gif");
+  background-position: 50% 50%, top left;
+  background-repeat: no-repeat, repeat;
+  box-shadow: 0 0 2px var(--color-frame-shadow);
+  line-height: 0;
+}
+
+.media-item__frame-link {
+  display: block;
+}
+
+.media-item__image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.media-item__video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ===== PROJECT NAV ===== */
+
+.project-nav {
+  display: grid;
+  grid-template-areas: "prev all next";
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.project-nav__link--prev {
+  grid-area: prev;
+  text-align: left;
+}
+
+.project-nav__link--all {
+  grid-area: all;
+  text-align: center;
+}
+
+.project-nav__link--next {
+  grid-area: next;
+  text-align: right;
+}

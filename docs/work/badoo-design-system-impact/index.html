@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Badoo - Measuring the Impact of the Design System - Cristiano Rastelli - Portfolio</title>
+    <meta name="description" content="Is it possible to measure the impact of the adoption of a design system on the workload of a team? This is the question that I tried to answer, when I started t…" />
+    <meta name="author" content="Cristiano Rastelli" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="http://www.didoo.net" rel="home">Didoo</a>
+        <nav class="page-header__menu" aria-label="Main">
+          <ul class="page-header__menu-list">
+            <li class="page-header__menu-item">
+              <a class="page-header__menu-link" href="http://www.didoo.net/">Blog</a>
+            </li>
+            <li class="page-header__menu-item">
+              <a class="page-header__menu-link page-header__menu-link--current" href="/">Portfolio</a>
+            </li>
+            <li class="page-header__menu-item">
+              <a class="page-header__menu-link" href="http://www.didoo.net/about/">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="page-main">
+      <header class="project-intro">
+        <h1 class="project-intro__title">Badoo - Measuring the Impact of the Design System</h1>
+        <p class="project-intro__text">Is it possible to measure the impact of the adoption of a design system on the workload of a team?</p>
+        <p class="project-intro__text">This is the question that I tried to answer, when I started this small side project. I've used a Node.js script to parse the git history of our Badoo Mobile Web application, extract the information relevant to the UI layer (CSS), and aggregate the data over a three years timescale. I have then plotted the data using D3.js in different formats of data-visualisation. The results were beyond imagination.</p>
+        <p class="project-intro__text">It was clearly possible to discern two periods in time, before and after the adoption of the design system. The first period was caractherized by large and frequent changes to the UI code; the second period by smaller and less frequent changes. This clearly showed how using a library of reusable UI components has drastically reduced the workload of the UI Engineering team.</p>
+        <p class="project-intro__text">I have written about my findings in a Medium post, where you can read in detail about this project, how I have developed the Node.js script, and how I have built the D3.js data visualisation for it.</p>
+        <p class="project-intro__website">Read the full story on Medium: <a href="https://medium.com/@didoo/measuring-the-impact-of-a-design-system-7f925af090f7">https://medium.com/@didoo/measuring-the-impact-of-a-design-system-7f925af090f7</a></p>
+      </header>
+      <ul class="media-list">
+        <li class="media-item">
+          <div class="media-item__header">
+            <div class="media-item__caption">
+              <h2 class="media-item__title">Comparison between application and component library - Change</h2>
+              <p class="media-item__description">Visual representation of the changes in two codebases, on the top the application and on the bottom the component library.</p>
+            </div>
+          </div>
+          <div class="media-item__frame">
+            <img class="media-item__image" alt="Comparison between application and component library - Change" src="media/graph-circles.png" width="988" height="1024" />
+          </div>
+        </li>
+        <li class="media-item">
+          <div class="media-item__header">
+            <div class="media-item__caption">
+              <h2 class="media-item__title">Comparison between application and component library - Frequency</h2>
+              <p class="media-item__description">A similar visual representation of the changes in two codebases, this time using rectangles instead of circles. In this case it's more evident the high frequency of change before the adoption of the component library.</p>
+            </div>
+          </div>
+          <div class="media-item__frame">
+            <img class="media-item__image" alt="Comparison between application and component library - Frequency" src="media/graph-squares.png" width="1024" height="659" loading="lazy" />
+          </div>
+        </li>
+        <li class="media-item">
+          <div class="media-item__header">
+            <div class="media-item__caption">
+              <h2 class="media-item__title">Frequency of change</h2>
+              <p class="media-item__description">The difference between before/after the introduction of a design system becomes even more self-evident when you compress horizontally the scale. In this case, the areas on the left get more opaque, while the areas on the right remains relatively transparent. This means that on the left we have many frequent medium/large changes, on the right infrequent small changes.</p>
+            </div>
+          </div>
+          <div class="media-item__frame">
+            <video class="media-item__video" controls preload="metadata" src="media/resize.mp4"></video>
+          </div>
+        </li>
+      </ul>
+      <nav class="project-nav" aria-label="Projects">
+        <a class="project-nav__link project-nav__link--prev" href="/work/readings-for-lunch/">&larr; Readings for Lunch</a>
+        <a class="project-nav__link project-nav__link--all" href="/" title="View all">&uarr; View all</a>
+      </nav>
+    </main>
+  </body>
+</html>
