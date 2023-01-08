@@ -1,0 +1,134 @@
+// ###### MAIN ######
+
+@use 'fonts' as *;
+
+body > article {
+	// layout
+	position: relative;
+	max-width: 934px;
+	margin: 50px auto;
+	padding: 50px;
+
+
+	//............................... HEADER ..........
+
+	header {
+		// layout
+		margin-bottom: 20px;
+		// formatting
+		text-align: left;
+
+		h3 {
+			// formatting
+			@include font_populaire;
+			font-size: 48px;
+			line-height: 1em;
+			color: #000000;
+		}
+
+		p {
+			// layout
+			margin: 20px 0px 50px;
+			// formatting
+			font-size: 16px;
+			line-height: 21px;
+			font-style: italic;
+			color: #999999;
+		}
+
+		span.website {
+			// layout
+			display: block;
+			margin: 10px 0px 30px;
+			// formatting
+			font-size: 16px;
+			line-height: 21px;
+			font-weight: bold;
+			color: #666666;
+		}
+
+	}
+
+	section {
+		// layout
+		margin: 0px auto;
+
+
+		// --- CONTENT-LIST ---
+
+		ul.content-list li {
+			// layout
+			width: 100%;
+			margin-bottom: 80px;
+			display: block;
+		}
+
+
+		// --- IMG-WRAP ---
+
+		span.img-wrap {
+			// layout
+			display:block;
+			line-height:0;
+			// formatting
+			background-image: url(../img/loading.gif), url(../img/diagonal_lines.gif);
+			background-position: 50% 50%, top left;
+			background-repeat: no-repeat, repeat;
+			box-shadow: 0px 0px 2px #CCCCCC;
+
+			img.content {
+				// layout
+				width: auto;
+				max-width: 100%;
+				margin: 0px auto;
+			}
+
+		}
+
+
+		// --- IMG-DATA ---
+
+		span.img-data {
+			// layout
+			display: block;
+			// TODO .clearfix;
+
+			span.img-caption {
+				// layout
+				/*width: 45%;*/
+				display: block;
+				float: left;
+				// formatting
+				text-align: left;
+				h4 { font-weight: bold; line-height: 20px; }
+				p { font-style: italic; margin-top: 5px; color: #999999; }
+			}
+
+			span.img-meta {
+				// layout
+				/*width: 45%;*/
+				display: block;
+				float: right;
+				// formatting
+				text-align: right;
+				p { font-size: 12px; line-height: 20px; color: #999999; }
+			}
+
+		}
+
+		// spacing between blocks
+		span.img-wrap + span.img-data ,
+		span.img-data + span.img-wrap { margin-top: 20px; }
+
+
+	}
+}
+
+
+
+/* RESPONSIVE
+----------------------------------------------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	body > article section { max-width: 934px; }
+}

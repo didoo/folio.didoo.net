@@ -1,0 +1,17 @@
+// ###### FOOTER ######
+
+@use 'fonts' as *;
+
+footer {
+	nav {
+		display: flex;
+		justify-content: space-between;
+
+		a {
+			// formatting
+			@include font_populaire;
+			font-size: 24px;
+			line-height: 1em;
+		}
+	}
+}

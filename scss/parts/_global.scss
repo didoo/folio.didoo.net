@@ -1,0 +1,42 @@
+// ###### GLOBAL DEFINITIONS ######
+
+@use 'fonts' as *;
+
+//............................... BODY ..........
+
+body {
+	// layout
+	position: relative;
+	padding: 0px;
+	// formatting
+	@include font_asap;
+    font-size: 16px;
+	text-align: center;
+	color: #333333;
+	background: #FFFFFF;
+}
+
+
+//............................... LINKS ..........
+
+a {
+	// formatting
+	color: #333333;
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		color: #000000;
+		text-decoration: underline;
+	}
+	&:visited {
+		color: #333333;
+	}
+}
+
+//............................... MEDIA ..........
+
+img, video {
+	width: 100%;
+	height: auto;
+}

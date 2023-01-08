@@ -1,0 +1,137 @@
+// ###### HEADER ######
+
+@use 'fonts' as *;
+
+header {
+	// layout
+	position: relative;
+	width: 100%;
+	height: 120px;
+	z-index: 999;
+	overflow: hidden;
+	// formatting
+	background: #ffb300;
+
+	> div {
+		// layout = responsive!
+		position: relative;
+		width: 100%;
+		height: 100%;
+		margin: 0px auto;
+
+		@media only screen and (min-width: 1025px) {
+			max-width: 1200px;
+		}
+
+		//............................... HEADER > LOGO ..........
+
+		> a {
+			// layout
+			position: absolute;
+			top: 31px;
+			left: 50px;
+			width: 250px;
+			height: 66px;
+			z-index: 9;
+			display: block;
+			// formatting
+			background: url(../img/didoo.svg) no-repeat 50% 50%;
+			background-size: 250px 66px;
+			text-indent: -9999px;
+			overflow: hidden;
+		}
+
+		//............................... HEADER > MENU ..........
+
+		> nav {
+			// layout
+			position: absolute;
+			top: 60px;
+			right: 50px;
+			z-index: 10;
+			user-select: none;
+
+			ul {
+				// layout
+				display: inline-block;
+				// TODO .clearfix;
+
+				li {
+					// layout
+					position: relative;
+					padding-left: 20px;
+					display: block;
+					float: left;
+
+					a {
+						// layout
+						position: relative;
+						height: 42px;
+						display: block;
+						// formatting
+						@include font_populaire;
+						font-size: 42px;
+						line-height: 42px;
+						text-align: center;
+						text-decoration: none;
+						color: #000000;
+						span {
+							position: absolute;
+							width: 100%;
+							height: 2px;
+							margin-top: 20px;
+							display: block;
+							background-color: #FFFFFF;
+							content: " ";
+							transition: margin-top 0.15s 0s ease-in-out, height 0.05s  0.15s ease-in-out;
+						}
+
+						&:hover {
+							text-decoration: none;
+							span {
+								margin-top: 0px;
+								height: 4px;
+							}
+						}
+
+					}
+
+					// current
+					&.current-menu-item a { color: #FFFFFF !important; }
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/* RESPONSIVE
+----------------------------------------------- */
+
+
+// --- CUSTOM BRAKEPOINT ---
+@media screen and (max-width:660px) {
+	body > header {
+		height: auto;
+		> div {
+			> a {
+				position: relative;
+				top: 0px;
+				left: 0px;
+				margin: 31px auto 20px;
+			}
+			> nav {
+				position: relative;
+				top: 0px;
+				right: 0px;
+				margin: 0px auto 10px;
+				ul li:first-child { padding-left: 0px; }
+				ul li a { font-size: 36px; }
+			}
+		}
+	}
+}
