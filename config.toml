@@ -1,3 +1,4 @@
 baseURL = 'http://folio.didoo.net/'
 languageCode = 'en-us'
 title = 'Cristiano Rastelli - Portfolio'
+theme = 'didoo-portfolio'
