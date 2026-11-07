@@ -16,6 +16,8 @@ templating or build step: don't add one. Node is only used for the dev checks.
 
 - Flat BEM selectors with full class names: no IDs, no nesting, no combinators, no `!important`
 - Never use `&__element` style shorthands
+- Only add a class when the CSS uses it: no classes on elements that need no styling
+- A modifier always comes with its base class (`block__element block__element--modifier`)
 - Separate each BEM block with a `/* ===== BLOCK NAME ===== */` comment
 - Blocks: `page-header`, `page-main`, `project-intro`, `media-list`, `media-item`, `project-nav`, plus the `visually-hidden` utility
 

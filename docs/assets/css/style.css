@@ -315,17 +315,17 @@ a:where(:hover, :active) {
   line-height: 1;
 }
 
-.project-nav__link--prev {
+.project-nav__prev {
   grid-area: prev;
   text-align: left;
 }
 
-.project-nav__link--all {
+.project-nav__all {
   grid-area: all;
   text-align: center;
 }
 
-.project-nav__link--next {
+.project-nav__next {
   grid-area: next;
   text-align: right;
 }

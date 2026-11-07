@@ -13,10 +13,11 @@
   },
   "scripts": {
     "serve": "python3 -m http.server 8000 --directory docs",
-    "check": "npm run lint:css && npm run lint:html && npm run check:links",
+    "check": "npm run lint:css && npm run lint:html && npm run check:links && npm run check:classes",
     "lint:css": "stylelint \"docs/assets/css/*.css\"",
     "lint:html": "html-validate \"docs/**/*.html\"",
-    "check:links": "node scripts/check-links.mjs"
+    "check:links": "node scripts/check-links.mjs",
+    "check:classes": "node scripts/check-classes.mjs"
   },
   "devDependencies": {
     "html-validate": "11.19.0",
