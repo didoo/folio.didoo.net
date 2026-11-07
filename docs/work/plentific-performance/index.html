@@ -6,19 +6,30 @@
     <title>Plentific - Performance - Cristiano Rastelli - Portfolio</title>
     <meta name="description" content="I have done a huge work in reducing the overall page weight and load time for the Plentific website. Because performance matters!" />
     <meta name="author" content="Cristiano Rastelli" />
+    <link rel="canonical" href="https://folio.didoo.net/work/plentific-performance/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#ffb300" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Cristiano Rastelli - Portfolio" />
+    <meta property="og:title" content="Plentific - Performance" />
+    <meta property="og:description" content="I have done a huge work in reducing the overall page weight and load time for the Plentific website. Because performance matters!" />
+    <meta property="og:url" content="https://folio.didoo.net/work/plentific-performance/" />
+    <meta property="og:image" content="https://folio.didoo.net/work/plentific-performance/media/wpt-waterfall-view-javascript-long.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo" href="http://www.didoo.net" rel="home">Didoo</a>
+        <a class="page-header__logo" href="http://www.didoo.net" rel="home"><img class="page-header__logo-image" src="/assets/img/didoo.svg" alt="Didoo" width="250" height="66" /></a>
         <nav class="page-header__menu" aria-label="Main">
           <ul class="page-header__menu-list">
             <li class="page-header__menu-item">
               <a class="page-header__menu-link" href="http://www.didoo.net/">Blog</a>
             </li>
             <li class="page-header__menu-item">
-              <a class="page-header__menu-link page-header__menu-link--current" href="/">Portfolio</a>
+              <a class="page-header__menu-link page-header__menu-link--current" href="/" aria-current="true">Portfolio</a>
             </li>
             <li class="page-header__menu-item">
               <a class="page-header__menu-link" href="http://www.didoo.net/about/">About</a>
@@ -34,108 +45,126 @@
       </header>
       <ul class="media-list">
         <li class="media-item">
-          <div class="media-item__header">
-            <div class="media-item__caption">
-              <h2 class="media-item__title">Web (not) performance</h2>
-              <p class="media-item__description">The status of the website when I joined: an extremely slow and heavy, completely tangled up, monolithic Angular application, that during the page rendering was able to lock the CPU for several seconds (the pink bar is the Javascript execution in the browser).</p>
+          <figure class="media-item__figure">
+            <figcaption class="media-item__header">
+              <div class="media-item__caption">
+                <h2 class="media-item__title">Web (not) performance</h2>
+                <p class="media-item__description">The status of the website when I joined: an extremely slow and heavy, completely tangled up, monolithic Angular application, that during the page rendering was able to lock the CPU for several seconds (the pink bar is the Javascript execution in the browser).</p>
+              </div>
+            </figcaption>
+            <div class="media-item__frame">
+              <img class="media-item__image" alt="" src="media/wpt-waterfall-view-javascript-long.png" width="1024" height="764" fetchpriority="high" />
             </div>
-          </div>
-          <div class="media-item__frame">
-            <img class="media-item__image" alt="Web (not) performance" src="media/wpt-waterfall-view-javascript-long.png" width="1024" height="764" />
-          </div>
+          </figure>
         </li>
         <li class="media-item">
-          <div class="media-item__header">
-            <div class="media-item__caption">
-              <h2 class="media-item__title">Web (not) performance</h2>
-              <p class="media-item__description">In some cases the web pages could take up to 50 seconds to load!</p>
+          <figure class="media-item__figure">
+            <figcaption class="media-item__header">
+              <div class="media-item__caption">
+                <h2 class="media-item__title">Web (not) performance</h2>
+                <p class="media-item__description">In some cases the web pages could take up to 50 seconds to load!</p>
+              </div>
+            </figcaption>
+            <div class="media-item__frame">
+              <img class="media-item__image" alt="" src="media/wpt-waterfall-view-slooooow.png" width="1024" height="700" loading="lazy" />
             </div>
-          </div>
-          <div class="media-item__frame">
-            <img class="media-item__image" alt="Web (not) performance" src="media/wpt-waterfall-view-slooooow.png" width="1024" height="700" loading="lazy" />
-          </div>
+          </figure>
         </li>
         <li class="media-item">
-          <div class="media-item__header">
-            <div class="media-item__caption">
-              <h2 class="media-item__title">Page load optimisation</h2>
-              <p class="media-item__description">This is the result after one year of work (probably the result I am more proud of): the reduction of the page load time by a factor of ten!</p>
+          <figure class="media-item__figure">
+            <figcaption class="media-item__header">
+              <div class="media-item__caption">
+                <h2 class="media-item__title">Page load optimisation</h2>
+                <p class="media-item__description">This is the result after one year of work (probably the result I am more proud of): the reduction of the page load time by a factor of ten!</p>
+              </div>
+            </figcaption>
+            <div class="media-item__frame">
+              <img class="media-item__image" alt="" src="media/homepage-timeload.png" width="1024" height="567" loading="lazy" />
             </div>
-          </div>
-          <div class="media-item__frame">
-            <img class="media-item__image" alt="Page load optimisation" src="media/homepage-timeload.png" width="1024" height="567" loading="lazy" />
-          </div>
+          </figure>
         </li>
         <li class="media-item">
-          <div class="media-item__header">
-            <div class="media-item__caption">
-              <h2 class="media-item__title">Page weight optimisation</h2>
-              <p class="media-item__description">And the corresponding reduction of the page weight by a similar factor.</p>
+          <figure class="media-item__figure">
+            <figcaption class="media-item__header">
+              <div class="media-item__caption">
+                <h2 class="media-item__title">Page weight optimisation</h2>
+                <p class="media-item__description">And the corresponding reduction of the page weight by a similar factor.</p>
+              </div>
+            </figcaption>
+            <div class="media-item__frame">
+              <img class="media-item__image" alt="" src="media/homepage-sizeload.png" width="1024" height="457" loading="lazy" />
             </div>
-          </div>
-          <div class="media-item__frame">
-            <img class="media-item__image" alt="Page weight optimisation" src="media/homepage-sizeload.png" width="1024" height="457" loading="lazy" />
-          </div>
+          </figure>
         </li>
         <li class="media-item">
-          <div class="media-item__header">
-            <div class="media-item__caption">
-              <h2 class="media-item__title">Comparison of load times on a desktop browser</h2>
-              <p class="media-item__description">Play the video (sorry, no preview) to see the difference in the loading times before and after the web pages optimisations.</p>
+          <figure class="media-item__figure">
+            <figcaption class="media-item__header">
+              <div class="media-item__caption">
+                <h2 class="media-item__title">Comparison of load times on a desktop browser</h2>
+                <p class="media-item__description">Play the video (sorry, no preview) to see the difference in the loading times before and after the web pages optimisations.</p>
+              </div>
+            </figcaption>
+            <div class="media-item__frame">
+              <video class="media-item__video" src="media/video-desktop-comparison.mp4" width="904" height="400" controls playsinline preload="metadata"></video>
             </div>
-          </div>
-          <div class="media-item__frame">
-            <video class="media-item__video" controls preload="metadata" src="media/video-desktop-comparison.mp4"></video>
-          </div>
+          </figure>
         </li>
         <li class="media-item">
-          <div class="media-item__header">
-            <div class="media-item__caption">
-              <h2 class="media-item__title">Comparison of load times on an iPhone</h2>
-              <p class="media-item__description">When comes to mobile devices, the performance improvement is even more prominent. See the full comparison on <a href="http://www.webpagetest.org/video/compare.php?tests=151112_4X_VZW,141215_DC_13HE">WebPageTest</a></p>
+          <figure class="media-item__figure">
+            <figcaption class="media-item__header">
+              <div class="media-item__caption">
+                <h2 class="media-item__title">Comparison of load times on an iPhone</h2>
+                <p class="media-item__description">When comes to mobile devices, the performance improvement is even more prominent.</p>
+              </div>
+            </figcaption>
+            <div class="media-item__frame">
+              <video class="media-item__video" src="media/video-iphone-comparison.mp4" width="904" height="680" controls playsinline preload="metadata"></video>
             </div>
-          </div>
-          <div class="media-item__frame">
-            <video class="media-item__video" controls preload="metadata" src="media/video-iphone-comparison.mp4"></video>
-          </div>
+          </figure>
         </li>
         <li class="media-item">
-          <div class="media-item__header">
-            <div class="media-item__caption">
-              <h2 class="media-item__title">Web performance on desktop</h2>
-              <p class="media-item__description">The waterfall chart for a desktop browser, before and after one year of optimisations.</p>
+          <figure class="media-item__figure">
+            <figcaption class="media-item__header">
+              <div class="media-item__caption">
+                <h2 class="media-item__title">Web performance on desktop</h2>
+                <p class="media-item__description">The waterfall chart for a desktop browser, before and after one year of optimisations.</p>
+              </div>
+            </figcaption>
+            <div class="media-item__frame">
+              <img class="media-item__image" alt="" src="media/waterfall-animation.gif" width="930" height="1113" loading="lazy" />
             </div>
-          </div>
-          <div class="media-item__frame">
-            <img class="media-item__image" alt="Web performance on desktop" src="media/waterfall-animation.gif" width="930" height="1113" loading="lazy" />
-          </div>
+          </figure>
         </li>
         <li class="media-item">
-          <div class="media-item__header">
-            <div class="media-item__caption">
-              <h2 class="media-item__title">Web performance on mobile</h2>
-              <p class="media-item__description">The waterfall chart for a mobile browser, before and after one year of optimisations.</p>
+          <figure class="media-item__figure">
+            <figcaption class="media-item__header">
+              <div class="media-item__caption">
+                <h2 class="media-item__title">Web performance on mobile</h2>
+                <p class="media-item__description">The waterfall chart for a mobile browser, before and after one year of optimisations.</p>
+              </div>
+            </figcaption>
+            <div class="media-item__frame">
+              <img class="media-item__image" alt="" src="media/waterfall-iphone-animation.gif" width="930" height="1015" loading="lazy" />
             </div>
-          </div>
-          <div class="media-item__frame">
-            <img class="media-item__image" alt="Web performance on mobile" src="media/waterfall-iphone-animation.gif" width="930" height="1015" loading="lazy" />
-          </div>
+          </figure>
         </li>
         <li class="media-item">
-          <div class="media-item__header">
-            <div class="media-item__caption">
-              <h2 class="media-item__title">Visual Progress / Speed Index</h2>
-              <p class="media-item__description">One of the key factors used to calculate the Speed Index of a website is the "shape" of the visual progress of a page. Here a comparison of the progress before and after the optimisation.</p>
+          <figure class="media-item__figure">
+            <figcaption class="media-item__header">
+              <div class="media-item__caption">
+                <h2 class="media-item__title">Visual Progress / Speed Index</h2>
+                <p class="media-item__description">One of the key factors used to calculate the Speed Index of a website is the "shape" of the visual progress of a page. Here a comparison of the progress before and after the optimisation.</p>
+              </div>
+            </figcaption>
+            <div class="media-item__frame">
+              <img class="media-item__image" alt="" src="media/visual-progress.png" width="1024" height="447" loading="lazy" />
             </div>
-          </div>
-          <div class="media-item__frame">
-            <img class="media-item__image" alt="Visual Progress / Speed Index" src="media/visual-progress.png" width="1024" height="447" loading="lazy" />
-          </div>
+          </figure>
         </li>
       </ul>
       <nav class="project-nav" aria-label="Projects">
         <a class="project-nav__link project-nav__link--prev" href="/work/plentific-website/">&larr; Plentific - Website</a>
-        <a class="project-nav__link project-nav__link--all" href="/" title="View all">&uarr; View all</a>
+        <a class="project-nav__link project-nav__link--all" href="/">&uarr; View all</a>
         <a class="project-nav__link project-nav__link--next" href="/work/to-bem-or-not-to-bem/">To BEM or Not To BEM &rarr;</a>
       </nav>
     </main>

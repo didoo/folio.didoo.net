@@ -9,23 +9,28 @@ templating or build step: don't add one. Node is only used for the dev checks.
 - `docs/work/<slug>/index.html`: a case study, with its images and videos in `media/` next to it
 - `docs/assets/`: the single stylesheet (`css/style.css`), `fonts/` and `img/`
 - `docs/albums/<id>/`: redirects from the old Koken URLs (see below)
-- `docs/404.html`, `docs/CNAME`, `docs/.nojekyll`
+- `docs/404.html`, `docs/CNAME`, `docs/.nojekyll`, `docs/favicon.svg`, `docs/apple-touch-icon.png`
+- `docs/assets/img/share.png`: the social preview image of the homepage
 
 ## CSS conventions
 
 - Flat BEM selectors with full class names: no IDs, no nesting, no combinators, no `!important`
 - Never use `&__element` style shorthands
 - Separate each BEM block with a `/* ===== BLOCK NAME ===== */` comment
-- Blocks: `page-header`, `page-main`, `project-intro`, `media-list`, `media-item`, `project-nav`
+- Blocks: `page-header`, `page-main`, `project-intro`, `media-list`, `media-item`, `project-nav`, plus the `visually-hidden` utility
 
 ## Adding a case study
 
 1. Copy an existing `docs/work/<slug>/index.html` to a new slug, and add the files to its `media/`
-2. Update `<title>`, the description, `project-intro` and the `media-item` list
-3. Set `width` and `height` on each image, and `loading="lazy"` on all but the first
-4. Add the entry at the top of the `media-list` in `docs/index.html`
-5. Update the `project-nav` of the new page and of its two neighbours: the prev/next order follows the homepage
-6. Run `npm run check`
+2. Update `<title>`, the description, the canonical and `og:` tags (absolute `https://folio.didoo.net` URLs,
+   `og:image` is the first image), `project-intro` and the `media-item` list
+3. Each `media-item` is a `<figure>`, with the caption in a `<figcaption>`. Use an empty `alt` only when the
+   caption already describes the image
+4. Set `width` and `height` on each image and video, `fetchpriority="high"` on the first image,
+   and `loading="lazy"` on all the others
+5. Add the entry at the top of the `media-list` in `docs/index.html`
+6. Update the `project-nav` of the new page and of its two neighbours: the prev/next order follows the homepage
+7. Run `npm run check`
 
 ## Editing the header
 
